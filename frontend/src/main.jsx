@@ -4,8 +4,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
-import Welcome from "./pages/welcome/Welcome";
-import Acceuil from "./pages/acceuil/Acceuil";
+import Welcome from "./pages/Welcome/Welcome";
+import Home from "./pages/Home/Home";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/home",
-        element: <Acceuil />,
+        element: <Home />,
       },
     ],
   },

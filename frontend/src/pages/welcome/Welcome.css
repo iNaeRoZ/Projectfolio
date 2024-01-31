@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .welcome-page {
   width: 100%;
   height: 100vh;
@@ -25,4 +20,13 @@ video {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   /* background-color: #000000cc; */
+}
+
+.welcome-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: Raleway;
+  color: rgb(0, 136, 255);
 }
