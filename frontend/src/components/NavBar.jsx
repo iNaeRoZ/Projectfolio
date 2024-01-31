@@ -9,6 +9,7 @@ function NavBar() {
       <div>Projects</div>
       <div>About Me</div>
       <div>Contact Me</div>
+      <div>Admin</div>
     </div>
   );
 }
