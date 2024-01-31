@@ -10,7 +10,7 @@ function Welcome() {
       <div className="overlay" />
       <video src={videoBg} autoPlay loop muted />
       <Link to="/home" className="welcome-text">
-        <p className="welcome-text">CLick here</p>
+        <p className="welcome-text">Click here</p>
       </Link>
     </div>
   );
