@@ -5,11 +5,10 @@ import { FaInstagram, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 function Footer() {
-  const style = { color: "black", fontSize: "3rem" };
+  const style = { color: "white", fontSize: "6rem" };
   return (
     <div className="footer">
-      <ul className="text-footer">
-        Me retrouver:
+      <div>
         <a href="https://twitter.com/MaximSignoret" aria-label="Twitter">
           <FaXTwitter style={style} />
         </a>
@@ -22,7 +21,7 @@ function Footer() {
         >
           <FaInstagram style={style} />
         </a>
-      </ul>
+      </div>
     </div>
   );
 }
