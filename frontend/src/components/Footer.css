@@ -1,0 +1,8 @@
+.footer {
+  background-color: #0f161e;
+  color: white;
+}
+
+.text-footer {
+  display: flex;
+}

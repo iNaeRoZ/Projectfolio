@@ -8,13 +8,16 @@ function AllProjects() {
 
   return (
     <div>
-      <div>Contact</div>
       <article className="list">
         {projects.map((project) => (
           <div className="container">
+            <img
+              className="img-container"
+              src={project.image}
+              alt={project.image}
+            />
             <h2>{project.name}</h2>
             <h3>{project.author}</h3>
-            <img src={project.image} alt={project.image} />
           </div>
         ))}
       </article>

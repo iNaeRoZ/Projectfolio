@@ -2,7 +2,7 @@ import React from "react";
 
 function Admin() {
   return (
-    <div className="nav_bar">
+    <div>
       <div>Contact Me</div>
     </div>
   );
