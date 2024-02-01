@@ -4,16 +4,16 @@ class ItemManager extends AbstractManager {
   constructor() {
     // Call the constructor of the parent class (AbstractManager)
     // and pass the table name "item" as configuration
-    super({ table: "item" });
+    super({ table: "project" });
   }
 
   // The C of CRUD - Create operation
 
-  async create(item) {
+  async create(project) {
     // Execute the SQL INSERT query to add a new item to the "item" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (title) values (?)`,
-      [item.title]
+      `insert into ${this.table} (name) values (?)`,
+      [project.name]
     );
 
     // Return the ID of the newly inserted item

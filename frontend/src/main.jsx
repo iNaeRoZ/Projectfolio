@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import axios from "axios";
 
 import App from "./App";
 import Welcome from "./pages/Welcome/Welcome";
 import Home from "./pages/Home/Home";
 import Admin from "./pages/Administration/Admin";
+import ProjectId from "./pages/ProjectId/ProjectId";
+import AllProjects from "./pages/AllProjects/AllProjects";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +27,32 @@ const router = createBrowserRouter([
       {
         path: "/admin",
         element: <Admin />,
+      },
+      {
+        path: "/projects",
+        element: <AllProjects />,
+        loader: ({ request }) => {
+          const query = new URL(request.url).search;
+
+          return axios
+            .get(`${import.meta.env.VITE_BACKEND_URL}/api/projects${query}`)
+            .then((res) => res.data)
+            .catch((err) => console.error(err));
+        },
+      },
+      {
+        path: "/projects/:projectId",
+        element: <ProjectId />,
+        loader: ({ params }) => {
+          return axios
+            .get(
+              `${import.meta.env.VITE_BACKEND_URL}/api/projects/${
+                params.projectId
+              }`
+            )
+            .then((res) => res.data)
+            .catch((err) => console.error(err));
+        },
       },
     ],
   },
