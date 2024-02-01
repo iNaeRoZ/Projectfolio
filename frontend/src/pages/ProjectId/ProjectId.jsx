@@ -4,9 +4,12 @@ import { useLoaderData } from "react-router-dom";
 function ProjectId() {
   const project = useLoaderData();
   return (
-    <div className="nav_bar">
+    <div>
       <div>Contact Me</div>
-      <div>{project.name}</div>
+      <div>
+        {project.name}
+        {project.author}
+      </div>
     </div>
   );
 }

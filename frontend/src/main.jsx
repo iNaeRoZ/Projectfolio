@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import axios from "axios";
+import connexion from "./services/connexion";
 
 import App from "./App";
 import Welcome from "./pages/Welcome/Welcome";
@@ -34,8 +34,8 @@ const router = createBrowserRouter([
         loader: ({ request }) => {
           const query = new URL(request.url).search;
 
-          return axios
-            .get(`${import.meta.env.VITE_BACKEND_URL}/api/projects${query}`)
+          return connexion
+            .get(`/projects${query}`)
             .then((res) => res.data)
             .catch((err) => console.error(err));
         },
@@ -44,12 +44,8 @@ const router = createBrowserRouter([
         path: "/projects/:projectId",
         element: <ProjectId />,
         loader: ({ params }) => {
-          return axios
-            .get(
-              `${import.meta.env.VITE_BACKEND_URL}/api/projects/${
-                params.projectId
-              }`
-            )
+          return connexion
+            .get(`/projects/${params.projectId}`)
             .then((res) => res.data)
             .catch((err) => console.error(err));
         },
