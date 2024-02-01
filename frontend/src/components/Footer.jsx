@@ -5,7 +5,7 @@ import { FaInstagram, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 function Footer() {
-  const style = { color: "white", fontSize: "6rem" };
+  const style = { color: "white", fontSize: "3rem" };
   return (
     <div className="footer">
       <div>

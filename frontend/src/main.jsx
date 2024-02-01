@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import connexion from "./services/connexion";
 
 import App from "./App";
-import Welcome from "./pages/Welcome/Welcome";
 import Home from "./pages/Home/Home";
 import Admin from "./pages/Administration/Admin";
 import ProjectId from "./pages/ProjectId/ProjectId";
@@ -16,10 +15,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      {
-        path: "/",
-        element: <Welcome />,
-      },
       {
         path: "/home",
         element: <Home />,
