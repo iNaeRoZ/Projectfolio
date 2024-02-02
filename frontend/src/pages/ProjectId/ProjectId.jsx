@@ -7,11 +7,14 @@ function ProjectId() {
   const project = useLoaderData();
   return (
     <div className="container-id">
-      <div>Contact Me</div>
-      <div>
-        {project.name}
-        {project.author}
-      </div>
+      <h1>{project.name}</h1>
+      <img src={project.image} alt={project.image} />
+      <p>Made by</p>
+      <div>{project.author}</div>
+      <p>Time</p>
+      <div>{project.date}</div>
+      <p>The objectve was</p>
+      <div>{project.description}</div>
     </div>
   );
 }
