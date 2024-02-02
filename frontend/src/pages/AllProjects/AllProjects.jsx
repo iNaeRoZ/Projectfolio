@@ -1,26 +1,24 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 
 import "./AllProjects.css";
+import Card from "../../components/Card";
 
 function AllProjects() {
   const projects = useLoaderData();
 
   return (
-    <div>
-      <article className="list">
-        {projects.map((project) => (
-          <div className="container">
-            <img
-              className="img-container"
-              src={project.image}
-              alt={project.image}
-            />
-            <h2>{project.name}</h2>
-            <h3>{project.author}</h3>
-          </div>
-        ))}
-      </article>
+    <div className="list">
+      {projects.map((project) => (
+        <div className="container">
+          <Card
+            title={project.name}
+            imageUrl={project.image}
+            body={project.description}
+          />
+          <Link to={`/projects/${project.id}`}>o</Link>
+        </div>
+      ))}
     </div>
   );
 }

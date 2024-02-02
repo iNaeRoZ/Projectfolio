@@ -1,5 +1,4 @@
-.Home {
-  height: 100vh;
+.container-id {
   background-image: url(../src/assets/Bg.jpg);
   background-size: cover;
 }
