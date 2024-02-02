@@ -1,4 +1,5 @@
 .container-id {
   background-image: url(../src/assets/Bg.jpg);
   background-size: cover;
+  height: 94.5vh;
 }

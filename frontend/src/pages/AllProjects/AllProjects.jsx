@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 import "./AllProjects.css";
 import Card from "../../components/Card";
@@ -15,8 +15,8 @@ function AllProjects() {
             title={project.name}
             imageUrl={project.image}
             body={project.description}
+            id={project.id}
           />
-          <Link to={`/projects/${project.id}`}>o</Link>
         </div>
       ))}
     </div>

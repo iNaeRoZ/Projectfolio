@@ -17,7 +17,7 @@ function NavBar() {
       <Link to="/home" className="welcome-text">
         <p className="welcome-text">Contact Me</p>
       </Link>
-      <Link to="/admin" className="welcome-text">
+      <Link to="/home" className="welcome-text">
         <p className="welcome-text">Admin</p>
       </Link>
     </div>

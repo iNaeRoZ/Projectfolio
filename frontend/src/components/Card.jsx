@@ -1,9 +1,10 @@
 import React from "react";
 import "./Card.css";
+import { Link } from "react-router-dom";
 
 import PropTypes from "prop-types";
 
-function Card({ title, imageUrl, body }) {
+function Card({ title, imageUrl, body, id }) {
   return (
     <div className="card-container">
       <div className="image-container">
@@ -18,9 +19,11 @@ function Card({ title, imageUrl, body }) {
         </div>
       </div>
       <div className="btn">
-        <button type="button">
-          <p>Read more</p>
-        </button>
+        <Link to={`/projects/${id}`}>
+          <button type="button">
+            <p>Read more</p>
+          </button>
+        </Link>
       </div>
     </div>
   );
@@ -29,5 +32,6 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 export default Card;

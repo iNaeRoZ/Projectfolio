@@ -5,8 +5,9 @@ import "./Home.css";
 function Home() {
   return (
     <div className="Home">
-      <div>Bonjour</div>
-      <div>fefe</div>
+      <div className="Title">
+        <h1>Bienvenue sur mon Portfolio</h1>
+      </div>
     </div>
   );
 }
