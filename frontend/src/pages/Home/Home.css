@@ -2,6 +2,10 @@
   height: 100vh;
   background-image: url(../src/assets/Bg.jpg);
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .Title {
@@ -9,4 +13,9 @@
   justify-content: center;
   padding-top: 40px;
   font-size: 40px;
+}
+
+.Lorem {
+  width: 400px;
+  text-align: center;
 }

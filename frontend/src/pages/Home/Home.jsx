@@ -6,8 +6,18 @@ function Home() {
   return (
     <div className="Home">
       <div className="Title">
-        <h1>Bienvenue sur mon Portfolio</h1>
+        <h1>Welcome on my Portfolio</h1>
       </div>
+      <p className="Lorem">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem optio
+        corrupti harum, a ut asperiores, veritatis modi accusamus eligendi
+        facere nihil eaque atque non. Velit, voluptatibus! Perferendis
+        reiciendis officia ad! Eaque fugiat esse molestias eveniet, quidem
+        ducimus voluptate architecto obcaecati dolores omnis quisquam,
+        dignissimos consequatur perferendis tempora. Corporis, provident.
+        Necessitatibus voluptate sint obcaecati facilis asperiores incidunt,
+        voluptas corporis quasi veniam.
+      </p>
     </div>
   );
 }
